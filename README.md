@@ -12,13 +12,13 @@ But, sometimes, we still want the queue to autoexit when necessary. For example,
 ### use multi-processes to run queue
 When some queue has more jobs than others, it may be good to set it to an indenpendent process. We make a new artisan command to make such complex supervisor configurations.
 # install
-1. You can install with composer.
+1. You can install with composer
 
-	compoer reqiure lekongkong/lgequeue
+	composer reqiure lekongkong/lgequeue
 
 2. Please replace the queue service provider, done.
 # config
-	Add this config sample to your `queue.php` config file.
+Add this config sample to your `queue.php` config file.
 
 	'supervisor' => [
 

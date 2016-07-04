@@ -49,8 +49,16 @@ class ServiceProvider extends QueueServiceProvider {
      * {@inheritdoc}
      */
     protected function registerFailedJobServices() {
-        $this->app->singleton('queue.failer', function () {
-            return new FailedJobProvider();
+        $this->app->singleton('queue.failer', function ($app) {
+            $config = $app['config']['queue.failed'];
+            if (isset($config['handler'])) {
+                $handler = $config['handler'];
+                return \App::make($handler);
+            } else if (isset($config['table'])) {
+                return new DatabaseFailedJobProvider($app['db'], $config['database'], $config['table']);
+            } else {
+                return new NullFailedJobProvider;
+            }
         });
     }
 }
