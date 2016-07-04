@@ -14,7 +14,7 @@ When some queue has more jobs than others, it may be good to set it to an indenp
 # install
 1. You can install with composer
 
-	composer reqiure jswh/lgequeue
+	composer reqiure lekongkong/lgequeue
 
 2. Please replace the queue service provider, done.
 # config
