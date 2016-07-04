@@ -44,7 +44,7 @@ Add this config sample to your `queue.php` config file.
     ],
 
 ### addtional config
-	you may add a new config `handler` to `failed` in `queue.php`, which will enable your own failed job provider.
+you may add a new config `handler` to `failed` in `queue.php`, which will enable your own failed job provider.
 
 	'failed' => [
         'handler' => \LgeQueue\FailedJobProvider::class
