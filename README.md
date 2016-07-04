@@ -14,7 +14,7 @@ When some queue has more jobs than others, it may be good to set it to an indenp
 # install
 1. You can install with composer
 
-	composer reqiure lekongkong/lgequeue
+	composer reqiure jswh/lgequeue
 
 2. Please replace the queue service provider, done.
 # config
@@ -41,6 +41,13 @@ Add this config sample to your `queue.php` config file.
                 'processNum' => 1,
             ],
         ],
+    ],
+
+### addtional config
+	you may add a new config `handler` to `failed` in `queue.php`, which will enable your own failed job provider.
+
+	'failed' => [
+        'handler' => \LgeQueue\FailedJobProvider::class
     ],
 
 # usage

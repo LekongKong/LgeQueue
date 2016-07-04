@@ -1,5 +1,12 @@
 {
+	"name": "lgequeue",
+	"description": "laravel graceful exit queue",
+	"version": 0.1,
+	"license": "MIT",
     "require": {
         "laravel/framework": "^5.2"
+    },
+	"psr-4": {
+      "LgeQueue\\": "src/"
     }
 }
