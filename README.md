@@ -17,6 +17,7 @@ When some queue has more jobs than others, it may be good to set it to an indenp
 	composer reqiure lekongkong/lgequeue
 
 2. Please replace the queue service provider, done.
+
 # config
 Add this config sample to your `queue.php` config file.
 
